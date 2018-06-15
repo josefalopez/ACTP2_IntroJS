@@ -13,5 +13,35 @@ Tip: Investigar el evento window.onload
   </head>
   <body>
 
+  <button id="boton">Boton</button>
+  <img src="https://source.unsplash.com/random/800x600" alt="">
+  <img src="https://source.unsplash.com/random/800x300" alt="">
+  <img src="https://source.unsplash.com/random/800x100" alt="">
+  <img src="https://source.unsplash.com/random/800x500" alt="">
+  <img src="https://source.unsplash.com/random/800x200" alt="">
+  <img src="https://source.unsplash.com/random/800x600" alt="">
+  <img src="https://source.unsplash.com/random/800x300" alt="">
+
+  <a href="#" id="enlace"></a>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		alert("DOM ready!");
+  	});
+
+  	$(window).on("load", function(){
+  		alert("Images ready!");
+  	});
+
+  	$("boton").on("click", function(){
+  		alert("Boton precionado");
+  	})
+
+  	$("#enlace").on("click", function(evt){
+  		evt.preventDefault();
+  	});
+
+  </script>
   </body>
 </html>
